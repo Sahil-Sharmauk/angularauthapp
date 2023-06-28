@@ -1,0 +1,36 @@
+.login-form{
+    /* display: flex; */
+    justify-content: center;
+    margin:auto;
+    border: 1px solid grey;
+    border-radius: 8px;
+    width:600px;
+    padding: 4rem;
+    margin-top: 5rem;
+}
+.form-inputs label{
+    display: flex;
+    font-weight: bold;
+}
+
+.form-inputs input{
+  width:100%
+}
+.form-inputs{
+    margin-bottom: 1.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.login-form button{
+    text-align: center;
+}

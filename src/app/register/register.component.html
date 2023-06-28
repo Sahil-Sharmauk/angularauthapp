@@ -1,0 +1,66 @@
+<div class="register-form">
+    <form [formGroup] = "registerForm" (ngSubmit) = "onRegister()">
+        <div style="text-align: center;">
+            <h3 >Register Here</h3>
+        </div>
+        
+        <div class="form-inputs">
+            <label for="name">Name:</label>
+            <input type="text" id="name" formControlName="name">
+        </div>
+
+        <div class="form-inputs">
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email">
+        </div>
+
+        <div class="form-inputs">
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" formControlName="phone" max-length="10"/>
+        </div>
+
+        <div class="form-inputs">
+            <label for="password">Password:</label>
+            <input type="password" id="password" formControlName="password">
+        </div>
+        
+        <div class="form-inputs">
+            <label for="user_gender" style="font-weight: bold;">Gender:</label>
+            <div class="form-inputs" *ngFor ="let gender of Genders" style="display: inline-flex; ">
+                <input type="radio" [value]="gender" id="user_gender" formControlName="user_gender"> 
+                <label for="user_gender" style="padding-right: 1.5rem; padding-left: 5px;">{{ gender }}</label>
+            </div>
+        </div>
+
+        <div class="form-inputs">
+            <label for="country">Country:</label>
+            <select formControlName="country" id="country">
+                <option disabled value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="Russia">Russia</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </div>
+
+        <div class="form-inputs">
+            <label for="image_path">Profile Image:</label>
+            <input type="file" id="image_path" (change)= "onImageSelected($event)"  accept="image/*"> 
+            
+        </div>
+
+        <div class="form-inputs">
+            <label for="extraFiles">Extra files:</label>
+            <input type="file" id="extraFiles"  (change)= "onFilesSelected($event)" multiple> 
+        </div>
+
+        <div  style="display: inline-flex; ">
+            <label for="remote_work" style="padding-right: 1.5rem; padding-left: 5px; font-weight: bold;">Remote Work:</label>
+            <input type="checkbox" id="remote_work"   formControlName="remote_work"> 
+        </div>
+        
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-success">Register</button>
+        </div>
+
+    </form>
+</div>

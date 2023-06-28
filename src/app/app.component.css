@@ -1,0 +1,13 @@
+.navbar-conatiner{
+    display: flex;
+}
+.navbar-list {
+    display: flex;
+    list-style: none;
+}
+.navbar-list a {
+    text-decoration: none;
+    padding:2.5rem;
+    font-size: 20px;
+
+}
